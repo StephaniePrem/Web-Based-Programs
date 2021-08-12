@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 0</title>
+</head>
+<body>
+
+    Stephanie Prem
+    <h1> COSC 484: Assignment 0 <h1 />
+    <h2><em> About the Professor <em /> <h2 />   <!-- this should be in italics -->
+        <a href="https://www.towson.edu/cosc"> Department of Computer & Information Sciences Website </a>
+        <a href="mailto:wvthompson@towson.edu"> Contact Dr. Thompson </a>
+        <a href="https://www.usatoday.com"> Current Event #1 </a>
+        <a href="https://www.nytimes.com/section/world"> Current Event #2 </a>
+        <a href="https://time.com"> Current Event #3 </a>
+    <h3><em> About Me <em /><h3 />
+        <ol> 
+            <li> I am in the marching band here at Towson. </li>
+            <li> I have played the flute for about 11 years. </li>
+            <li> I used to be a competitive swimmer. </li>
+            <li> I like cats but do not have one. </li>
+        <ol />
+    <footer> Thank you for looking at my webpage! </footer>
+</body>
+</html>
