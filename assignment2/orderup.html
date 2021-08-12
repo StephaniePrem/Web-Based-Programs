@@ -1,0 +1,253 @@
+<!-- Stephanie Prem -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Order Up</title>
+    <link rel="stylesheet" type="text/css" href="orderup.css" />
+</head>
+
+<body>
+    <img src="marcel-strauss-dMc2liPXMck-unsplash.jpg" alt="picture of a mountain">
+    <header> Order Up</header>
+    <form name="order" method="get" action="results.html" class="font">
+
+        <fieldset id="feilds1" class="form-control-group">
+            <header>Billing Address</header>
+            <div>
+                <label for="firstname"> First Name </label>
+                <input id="firstname" type="text" name="firstname" required placeholder="First Name" />
+            </div>
+            <div>
+                <label for="lastname"> Last Name </label>
+                <input id="lastname" type="text" name="lastname" required placeholder="Last Name" />
+            </div>
+
+            <div>
+                <label for="address"> Street Address </label>
+                <input id="address" type="text" name="address" required placeholder="Street Address" />
+            </div>
+            <div>
+                <label for="city"> City </label>
+                <input id="city" type="text" name="city" required placeholder="City" />
+            </div>
+            <div>
+                <label for="states"> State </label>
+                <select id="states" name="states">
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AR</option>
+                    <option>AZ</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>IA</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>MA</option>
+                    <option>MD</option>
+                    <option>ME</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MO</option>
+                    <option>MS</option>
+                    <option>MT</option>
+                    <option>NC</option>
+                    <option>NE</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NV</option>
+                    <option>NY</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WI</option>
+                    <option>WV</option>
+                    <option>WY</option>
+                </select>
+            </div>
+
+        </fieldset>
+
+        <fieldset id="feilds2" class="form-control-group">
+            <header>Delivery Address</header>
+            <label for="sameAsBill"> Same as Billing </label>
+            <input type="checkbox" name="sameAsBill" id="sameAsBill" onchange="populateDelivery()">
+            <div>
+                <label for="firstnameD"> First Name </label>
+                <input id="firstnameD" type="text" name="firstnameD" required placeholder="First Name" />
+            </div>
+            <div>
+                <label for="lastnameD"> Last Name </label>
+                <input id="lastnameD" type="text" name="lastnameD" required placeholder="Last Name" />
+            </div>
+
+            <div>
+                <label for="addressD"> Street Address </label>
+                <input id="addressD" type="text" name="addressD" required placeholder="Street Address" />
+            </div>
+            <div>
+                <label for="cityD"> City </label>
+                <input id="cityD" type="text" name="cityD" required placeholder="City" />
+            </div>
+            <div>
+                <label for="statesD"> State </label>
+                <select id="statesD" name="statesD">
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AR</option>
+                    <option>AZ</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>IA</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>MA</option>
+                    <option>MD</option>
+                    <option>ME</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MO</option>
+                    <option>MS</option>
+                    <option>MT</option>
+                    <option>NC</option>
+                    <option>NE</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NV</option>
+                    <option>NY</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WI</option>
+                    <option>WV</option>
+                    <option>WY</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset id="feilds3" class="form-control-group">
+            <header>Payment</header>
+            <div>
+                <label for="visa"> Visa </label>
+                <input id="visa" type="radio" name="pay" value="Visa" checked />
+            </div>
+            <div>
+                <label for="disc"> Discover </label>
+                <input id="disc" type="radio" name="pay" value="Discover" />
+            </div>
+            <div>
+                <label for="mc"> Master Card </label>
+                <input id="mc" type="radio" name="pay" value="Master Card" />
+            </div>
+            <div>
+                <label for="ae"> American Express </label>
+                <input id="ae" type="radio" name="pay" value="American Express" />
+            </div>
+            <div>
+                <label for="cardno"> Card Number </label>
+                <input id="cardno" type="text" name="cardno" required placeholder="xxxx xxxx xxxx xxxx" />
+            </div>
+            <div>
+                <label for="month"> Month </label>
+                <select name="month" id="month">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </div>
+            <div>
+                <label for="year"> Year </label>
+                <select id="year" name="year">
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </div>
+            <div>
+                <label for="cvv"> CVV </label>
+                <input id="cvv" type="text" name="cvv" maxlength="4" required placeholder="xxx" />
+            </div>
+        </fieldset>
+
+        <fieldset id="feilds4" class="form-control-group">
+            <header>Account</header>
+            <div>
+                <label for="user"> User Name </label>
+                <input id="user" type="text" name="user" required placeholder="User Name" />
+            </div>
+            <div>
+                <label for="pass"> Password </label>
+                <input id="pass" type="password" name="pass" required placeholder="Password"
+                    onchange="validatePassword()" />
+            </div>
+            <div>
+                <label for="passverify"> Password Verification </label>
+                <input id="passverify" type="password" name="passverify" required placeholder="Password"
+                    onkeyup="validatePassword()" />
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Place Order" id="submit" />
+        </div>
+
+    </form>
+
+    <script src="orderup.js"></script>
+</body>
+
+</html>
